@@ -1,6 +1,13 @@
 const addToDo = () => {
     const inputToDo = document.getElementById('addToDo').value;
     const toDo = document.getElementById('toDo');
+    document.getElementById('addToDo').value = '';
+
+    if (inputToDo.trim() === "") {
+        alert("Inserisci un To-Do valido!");
+        return;
+    }
+    
 
     // Crea un nuovo elemento To-Do
     const newToDo = document.createElement('div');
